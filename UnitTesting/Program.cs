@@ -47,4 +47,10 @@ public class BankAccount
             throw new ArgumentException("There was an error checking your balance");
         }
     }
+
+    public decimal CalculatePercentage(decimal percentage)
+    {
+        decimal percentageAsDecimal = percentage / 100;
+        return balance * percentageAsDecimal;
+    }
 }

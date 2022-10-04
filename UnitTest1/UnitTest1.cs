@@ -88,5 +88,15 @@ namespace UnitTest1
                 account.balance);
             
         }
+
+        [TestMethod]
+        public void CalculateInterest()
+        {
+            // CalaculateInterest returns a number that is the percentage given amount
+            decimal percentage = 7;
+            decimal assertedReturn = StartingBalance * (percentage / 100);
+            Assert.AreEqual(assertedReturn, TestAccount.CalculatePercentage(percentage));
+
+        }
     }
 }
